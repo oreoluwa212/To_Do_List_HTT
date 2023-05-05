@@ -1,0 +1,333 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+}
+
+:root {
+    --purple: hsl(259, 100%, 65%);
+    --light: hsl(0, 100%, 100%);
+    --blue: hsl(245, 100%, 50%);
+    --aqua: hsl(194, 100%, 65%);
+    --light-grey: hsl(0, 0%, 98%);
+    --lgrayish-blue: hsl(236, 33%, 92%);
+    --vlight-grayish-blue: hsl(233, 11%, 84%);
+    --dark-grayish-blue: hsl(236, 9%, 61%);
+    --vdark-grayish-blue: hsl(235, 19%, 35%);
+}
+
+.dark-theme {
+    --dark: hsl(235, 21%, 11%);
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark);
+    /* font-family: system-ui; */
+}
+
+.banner-con {
+    width: 100%;
+    height: 60vh;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    background: url("./images/bg-desktop-dark.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon {
+    cursor: pointer;
+}
+
+.content {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40vh;
+}
+
+.content h1 {
+    letter-spacing: 3px;
+    color: #fff;
+    font-size: 4rem;
+}
+
+.content img {
+    height: 37px;
+}
+
+.todo {
+    width: 600px;
+    max-height: 498px;
+}
+
+form {
+    width: 100%;
+    height: 83px;
+}
+
+form input {
+    width: 100%;
+    display: flex;
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin-top: 2rem;
+    background: var(--vlight-grayish-blue);
+    font-size: 1.2rem;
+    color: var(--dark-grayish-blue);
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
+}
+
+input::placeholder {
+    color: var(--vdark-grayish-blue);
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.list {
+    width: 100%;
+    max-height: 330px;
+    margin-top: 2rem
+}
+
+.todo-con {
+    width: 100%;
+    background-color: var(--vdark-grayish-blue);
+    border-radius: 5px;
+}
+
+.todo-li {
+    display: flex;
+    background-color: var(--light);
+    padding: 1rem 0.9rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-style: italic;
+    font-size: 1.3rem;
+    align-items: center;
+}
+
+.todo-li p {
+    width: 100%;
+    color: var(--vdark-grayish-blue);
+    font-weight: 600;
+}
+
+.todo-li .check {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--dark-grayish-blue);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.todo-li .check img {
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+.todo-li .close {
+    background: transparent;
+    border: none;
+    outline: none;
+    opacity: 0;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.todo-li:hover .close {
+    opacity: 1;
+}
+
+.hr {
+    width: 100%;
+    background: var(--dark-grayish-blue);
+    height: 2px;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    font-weight: 400;
+    justify-content: space-between;
+    color: var(--dark-grayish-blue);
+    padding: 1rem 0.9rem;
+    background: var(--light);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.choice {
+    display: flex;
+}
+
+.choice p {
+    padding: 0px 5px;
+}
+
+.info p:hover {
+    color: var(--blue);
+}
+
+.active {
+    color: var(--blue);
+}
+
+.active-check {
+    background: linear-gradient(--aqua, --purple);
+}
+
+.active-check img {
+    transform: scale(1) !important;
+}
+
+.complete {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.attribution {
+    font-size: 0.6em;
+    text-align: center;
+    padding: 4rem;
+}
+
+.attribution a {
+    color: var(--purple);
+}
+
+
+@media screen and (max-width: 414px) {
+    body {
+            width: 100%;
+            height: 20vh;
+            background-color: var(--dark);
+            font-family: system-ui;
+        }
+    
+        .banner-con {
+            width: 100%;
+            height: 10vh;
+            
+        }
+                .banner {
+                    width: 100%;
+                    height: 100%;
+                }
+        .content {
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30vh;
+        }
+        
+        .content h1 {
+            letter-spacing: 3px;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        .todo {
+            width: 300px;
+            max-height: 208px;
+        }
+    
+        form {
+            width: 70%;
+            height: 43px;
+        }
+        form input {
+            width: 100wh;
+            display: flex;
+            padding: 10px 30px;
+            border-radius: 5px;
+            margin-top: .3rem;
+            background: var(--vlight-grayish-blue);
+            font-size: 1.2rem;
+            color: var(--dark-grayish-blue);
+            letter-spacing: 1px;
+            outline: none;
+            border: none;
+        }
+    
+        input::placeholder {
+            color: var(--vdark-grayish-blue);
+            font-weight: 30;
+            font-style: italic;
+            letter-spacing: 0px;
+            padding: none;
+        }
+                form input {
+                    width: 300px;
+                    display: flex;
+                    padding: 15px 30px;
+                    border-radius: 5px;
+                    margin-top: 2rem;
+                    background: var(--vlight-grayish-blue);
+                    font-size: 1.2rem;
+                    color: var(--dark-grayish-blue);
+                    letter-spacing: 1px;
+                    outline: none;
+                    border: none;
+                }
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    justify-content: space-between;
+    color: var(--dark-grayish-blue);
+    padding: 2rem 0.7rem;
+    background: var(--light);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.choice {
+    display: flex;
+}
+
+.choice p {
+    padding: 0px 5px;
+}
+
+.info p:hover {
+    color: var(--blue);
+}
+
+.active {
+    color: var(--blue);
+}
+
+.active-check img {
+    background-image: url(./images/icon-check.svg);
+}
+
+.active-check img {
+    transform: scale(1) !important;
+}
+
+.complete {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+}
